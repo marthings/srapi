@@ -12,7 +12,7 @@ module.exports =
     js_pipeline(files: 'assets/js/*.coffee'),
     css_pipeline(files: 'assets/css/*.styl')
     records(
-      srapi: { url: 'http://api.sr.se/api/v2/channels?format=json' }
+      svtapi: { url: 'https://api.svt.se/svtse/program_lists/' }
     )
   ]
 

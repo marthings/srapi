@@ -1,11 +1,11 @@
 extends layout
 
 block content
-  h3 SRs öppna API!
+  h1 SVT:s öppna API!!!!!!
   p Här ser du vad man kan hämta 
-  a(href="http://api.sr.se/api/v2/channels?format=json" target="_blank") API-länken
-  each channel in records.srapi.channels
-    h1= channel.name
-    p= channel.siteurl
-    img(src="#{channel.image}")
+  a(href="https://api.svt.se/svtse/program_lists/" target="_blank") API-länken
+  each entry in records.svtapi.data
+    h1= entry.id
+    p= entry.type
+
   
