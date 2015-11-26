@@ -4,8 +4,11 @@ block content
   h1 SVT:s öppna API!!!!!!
   p Här ser du vad man kan hämta 
   a(href="https://api.svt.se/svtse/program_lists/" target="_blank") API-länken
-  each entry in records.svtapi.data
-    h1= entry.id
-    p= entry.type
+  each object in records.svtapi.data
+    each nestedObject in object.attributes
+      each entry in nestedObject
 
-  
+        .entry
+          a(href= entry.url target="_blank") entry.url
+
+ 
